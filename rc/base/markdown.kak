@@ -16,19 +16,68 @@ hook global BufCreate .*[.](markdown|md|mkd) %{
 # ‾‾‾‾‾‾‾‾‾‾‾‾
 
 addhl -group / regions -default content markdown \
-    sh         ```sh   ```                    '' \
-    fish       ```fish ```                    '' \
-    ruby       ```ruby ```                    '' \
-    code       ```     ```                    '' \
-    code       ``       ``                    '' \
-    code       `         `                    ''
+    sh         	     ```sh           ```                    '' \
+    fish       	     ```fish         ```                    '' \
+    ruby       	     ```ruby         ```                    '' \
+    c          	     ```c            ```                    '' \
+    cpp        	     ```cpp          ```                    '' \
+    java       	     ```java         ```                    '' \
+    python     	     ```python       ```                    '' \
+    gas        	     ```asm          ```                    '' \
+    css        	     ```css          ```                    '' \
+    lua        	     ```lua          ```                    '' \
+    html       	     ```html         ```                    '' \
+    perl       	     ```perl         ```                    '' \
+    rust       	     ```rust         ```                    '' \
+    javascript 	     ```javascript   ```                    '' \
+    scala      	     ```scala        ```                    '' \
+    yaml       	     ```yaml         ```                    '' \
+    lisp       	     ```lisp         ```                    '' \
+    swift      	     ```swift        ```                    '' \
+    golang     	     ```golang       ```                    '' \
+    golang     	     ```go           ```                    '' \
+    haskell    	     ```haskell      ```                    '' \
+    dlang      	     ```dlang        ```                    '' \
+    dlang      	     ```d            ```                    '' \
+    coffeescript     ```coffeescript ```                    '' \
+    ini        	     ```ini          ```                    '' \
+    latex    	     ```latex        ```                    '' \
+    xml    	     ```xml          ```                    '' \
+    code             ```             ```                    '' \
+    code             ``               ``                    '' \
+    code             `                 `                    ''
 
+
+
+ 
 addhl -group /markdown/code fill meta
 
-addhl -group /markdown/sh   ref sh
-addhl -group /markdown/fish ref fish
-addhl -group /markdown/ruby ref ruby
-
+addhl -group /markdown/sh              ref sh
+addhl -group /markdown/fish            ref fish
+addhl -group /markdown/ruby            ref ruby
+addhl -group /markdown/c               ref c
+addhl -group /markdown/cpp             ref cpp
+addhl -group /markdown/java            ref java
+addhl -group /markdown/python          ref python
+addhl -group /markdown/gas             ref gas
+addhl -group /markdown/css             ref css
+addhl -group /markdown/lua             ref lua
+addhl -group /markdown/html            ref html
+addhl -group /markdown/perl            ref perl
+addhl -group /markdown/rust            ref rust
+addhl -group /markdown/javascript      ref javascript
+addhl -group /markdown/scala           ref scala
+addhl -group /markdown/yaml            ref yaml
+addhl -group /markdown/lisp            ref lisp
+addhl -group /markdown/swift           ref swift
+addhl -group /markdown/golang          ref golang
+addhl -group /markdown/haskell         ref haskell
+addhl -group /markdown/dlang           ref dlang
+addhl -group /markdown/coffeescript    ref coffeescript
+addhl -group /markdown/ini             ref ini
+addhl -group /markdown/latex           ref latex
+addhl -group /markdown/xml             ref xml
+ 
 # Setext-style header
 addhl -group /markdown/content regex (\A|\n\n)[^\n]+\n={2,}\h*\n\h*$ 0:title
 addhl -group /markdown/content regex (\A|\n\n)[^\n]+\n-{2,}\h*\n\h*$ 0:header
